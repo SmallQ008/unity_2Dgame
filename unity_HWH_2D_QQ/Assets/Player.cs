@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public string cName = "貓咪";
     [Header("虛擬搖桿")]
     public FixedJoystick joystick;
+    public Transform tra;
+    public Animator ani;
     
     private void Move()
     {
@@ -20,6 +22,10 @@ public class Player : MonoBehaviour
         print("水平:" + h);
         float v = joystick.Vertical;
         print("垂直:" + v);
+
+        tra.Translate(h*speed*Time.deltaTime, v*speed*Time.deltaTime, 0);
+        ani.SetFloat("水平", h);
+        ani.SetFloat("垂直", v);
     }
     private void Attack()
     {
