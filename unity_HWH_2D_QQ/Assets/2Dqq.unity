@@ -133,6 +133,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 99597c7b4aa47494fb2b6061505735da,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635369, guid: 99597c7b4aa47494fb2b6061505735da,
+        type: 3}
+      propertyPath: m_TagString
+      value: "\u9053\u5177"
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 99597c7b4aa47494fb2b6061505735da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20159,7 +20169,7 @@ MonoBehaviour:
   joystick: {fileID: 1068462054}
   tra: {fileID: 473202541}
   ani: {fileID: 473202539}
-  rangeAttack: 0.63
+  rangeAttack: 0.66
 --- !u!50 &473202543
 Rigidbody2D:
   serializedVersion: 4
