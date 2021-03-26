@@ -14,7 +14,14 @@ public class Player : MonoBehaviour
     public FixedJoystick joystick;
     public Transform tra;
     public Animator ani;
-    
+    [Header("偵測範圍")]
+        public float rangeAttack = 2.5f;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.2f);
+        Gizmos.DrawSphere(transform.position, rangeAttack);
+    }
     private void Move()
     {
         print("移動");
@@ -27,9 +34,11 @@ public class Player : MonoBehaviour
         ani.SetFloat("水平", h);
         ani.SetFloat("垂直", v);
     }
-    private void Attack()
+    public void Attack()
     {
-
+        print("攻擊");
+        //2D 物理圓形碰撞(中心點, 半徑,方向)
+        Physics2D.CircleCast(transform.position, rangeAttack, transform.up);
     }
     private void Hit()
     {
