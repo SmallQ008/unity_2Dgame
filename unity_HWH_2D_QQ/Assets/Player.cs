@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     public Animator ani;
     [Header("偵測範圍")]
         public float rangeAttack = 2.5f;
+    [Header("音效來源")]
+    public AudioSource aud;
+    [Header("攻擊音效")]
+    public AudioClip soundAttack;
 
     private void OnDrawGizmos()
     {
@@ -40,6 +44,7 @@ public class Player : MonoBehaviour
         //2D 物理圓形碰撞(中心點, 半徑,方向)
         RaycastHit2D hit =Physics2D.CircleCast(transform.position, rangeAttack, transform.up,0,1<<8 );
         print("碰到的物件:" + hit.collider.name);
+        aud.PlayOneShot(soundAttack, 0.5f);
 
         if (hit.collider.tag == "道具") Destroy(hit.collider.gameObject);
     }
