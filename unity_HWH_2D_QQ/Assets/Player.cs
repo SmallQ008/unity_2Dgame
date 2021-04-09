@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         print("碰到的物件:" + hit.collider.name);
         aud.PlayOneShot(soundAttack, 0.5f);
 
-        if (hit.collider.tag == "道具") Destroy(hit.collider.gameObject);
+        if (hit && hit.collider.tag == "道具") hit.collider.GetComponent<item>().DropProp();
     }
     private void Hit()
     {
