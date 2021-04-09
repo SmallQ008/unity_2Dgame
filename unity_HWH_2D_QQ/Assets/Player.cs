@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -65,6 +66,23 @@ public class Player : MonoBehaviour
     {
         Move();
     }
+    [Header("吃金幣音效")]
+    public AudioClip soundEat;
+    [Header("金幣數量")]
+    public Text textCoin;
 
+    private int coin;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "金條")
+        {
+            coin++;
+            aud.PlayOneShot(soundEat);
+            Destroy(collision.gameObject);
+            textCoin.text = "金幣:" + coin;
+        }
+    }
+    
 
 }
