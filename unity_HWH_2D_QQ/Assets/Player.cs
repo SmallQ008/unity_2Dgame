@@ -29,11 +29,11 @@ public class Player : MonoBehaviour
     }
     private void Move()
     {
-        print("移動");
+       // print("移動");
         float h = joystick.Horizontal;
-        print("水平:" + h);
+        //print("水平:" + h);
         float v = joystick.Vertical;
-        print("垂直:" + v);
+        //print("垂直:" + v);
 
         tra.Translate(h*speed*Time.deltaTime, v*speed*Time.deltaTime, 0);
         ani.SetFloat("水平", h);

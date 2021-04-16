@@ -21237,6 +21237,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110557368}
     m_Modifications:
+    - target: {fileID: 6644944588161500793, guid: 4be821d0b78ad5043985b57b738e951b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644944589867386884, guid: 4be821d0b78ad5043985b57b738e951b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21917,6 +21922,7 @@ GameObject:
   - component: {fileID: 1190535463}
   - component: {fileID: 1190535462}
   - component: {fileID: 1190535461}
+  - component: {fileID: 1190535464}
   m_Layer: 0
   m_Name: pipo-nekonin013_0
   m_TagString: Untagged
@@ -22008,6 +22014,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190535464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190535460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76327daf9eff8324dbcd9b99f6123489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeTrack: 2
 --- !u!1001 &1190760835
 PrefabInstance:
   m_ObjectHideFlags: 0
