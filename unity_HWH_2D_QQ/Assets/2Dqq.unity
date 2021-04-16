@@ -21342,7 +21342,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -26842,6 +26842,9 @@ MonoBehaviour:
   rangeTrack: 2
   rangeAttack: 0.5
   speed: 2
+  psAttack: {fileID: 785128672}
+  cdAttack: 3
+  attack: 20
 --- !u!1001 &1190760835
 PrefabInstance:
   m_ObjectHideFlags: 0
