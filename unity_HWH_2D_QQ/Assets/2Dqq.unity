@@ -19838,6 +19838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 984279597}
+  rectDamage: {fileID: 5056271779022552520, guid: 644afc96a561fd44bade70802ad0c566,
+    type: 3}
 --- !u!1001 &416831150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26377,8 +26379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -0.010645, y: -0.5}
+  m_SizeDelta: {x: 500.0213, y: 40.187836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &984279597
 MonoBehaviour:
@@ -26532,8 +26534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: 0, y: -0.50001}
+  m_SizeDelta: {x: 500, y: 40.187836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025779731
 MonoBehaviour:
@@ -27108,7 +27110,7 @@ MonoBehaviour:
   rangeAttack: 0.5
   speed: 2
   psAttack: {fileID: 785128672}
-  cdAttack: 5
+  cdAttack: 2
   attack: 20
 --- !u!1001 &1190760835
 PrefabInstance:

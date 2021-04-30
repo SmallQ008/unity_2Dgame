@@ -1,11 +1,13 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
 public class HPmaneger : MonoBehaviour
 {
     [Header("血條")]
     public Image bar;
+    [Header("傷害數值")]
+    public RectTransform rectDamage;
     /// <summary>
     /// 
     /// </summary>
@@ -15,5 +17,9 @@ public class HPmaneger : MonoBehaviour
    public void UpdateHpBar (float Hp,float HpMax)
     {
         bar.fillAmount = Hp / HpMax;
+    }
+    public IEnumerator ShowDamage()
+    {
+
     }
 }
