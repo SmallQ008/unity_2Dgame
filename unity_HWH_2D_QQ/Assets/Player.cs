@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
     {
         hp -= damage;
         hpManager.UpdateHpBar(hp, hpMax);
+        StartCoroutine(hpManager.ShowDamage());
     }
     private void Dead()
     {
