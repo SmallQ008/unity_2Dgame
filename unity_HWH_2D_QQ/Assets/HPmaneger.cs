@@ -20,6 +20,16 @@ public class HPmaneger : MonoBehaviour
     }
     public IEnumerator ShowDamage()
     {
+        RectTransform rect = Instantiate(rectDamage, transform);
+        rect.anchoredPosition = new Vector2(0, 200);
 
+        float y = rect.anchoredPosition.y;
+
+        while (y<400)
+        {
+            y += 20;
+            rect.anchoredPosition = new Vector2(0, y);
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 }
