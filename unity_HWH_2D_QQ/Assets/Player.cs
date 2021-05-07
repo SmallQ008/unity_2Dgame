@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public HPmaneger hpManager;
     [Header("攻擊力"), Range(0, 1000)]
     public float attack = 20;
+    [Header("等級文字")]
+    public Text textLv;
 
     private float HpMax;
 

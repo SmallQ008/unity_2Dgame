@@ -8,15 +8,19 @@ public class Enemy : MonoBehaviour
     public float rangeAttack = 0.5f;
     [Header("移動速度"), Range(0, 50)]
     public float speed = 2;
-    private Transform player;
+    
     [Header("攻擊特效")]
     public ParticleSystem psAttack;
     [Header("攻擊冷卻時間"), Range(0, 10)]
     public float cdAttack = 3;
     [Header("攻擊力"), Range(0, 1000)]
     public float attack = 20;
+    [Header("經驗值"), Range(0, 500)]
+    public float exp = 30;
 
-    
+
+    private Transform player;
+    private Player _player;
     private float timer;
 
     [Header("血量")]
@@ -25,7 +29,8 @@ public class Enemy : MonoBehaviour
     [Header("血量系統")]
     public HPmaneger hpManager;
     [Header("角色是否死亡")]
-    public bool isDead = false;
+    
+    private bool isDead = false;
 
     private float HpMax;
 
@@ -33,6 +38,7 @@ public class Enemy : MonoBehaviour
     {
         hpMax = hp;
         player = GameObject.Find("玩家").transform;
+        _player = player.GetComponent<Player>();
     }
 
     
