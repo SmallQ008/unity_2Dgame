@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     private float hpMax;
     [Header("血量系統")]
     public HPmaneger hpManager;
+    [Header("攻擊力"), Range(0, 1000)]
+    public float attack = 20;
 
     private float HpMax;
 

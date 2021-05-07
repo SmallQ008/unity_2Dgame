@@ -19,8 +19,17 @@ public class Enemy : MonoBehaviour
     
     private float timer;
 
+    [Header("血量")]
+    public float hp = 200;
+    private float hpMax;
+    [Header("血量系統")]
+    public HPmaneger hpManager;
+
+    private float HpMax;
+
     private void Start()
     {
+        hpMax = hp;
         player = GameObject.Find("玩家").transform;
     }
 
