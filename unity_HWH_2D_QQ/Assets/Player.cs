@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
         aud.PlayOneShot(soundAttack, 0.5f);
 
         if (hit && hit.collider.tag == "道具") hit.collider.GetComponent<item>().DropProp();
+        if (hit && hit.collider.tag == "敵人") hit.collider.GetComponent<Enemy>().Hit(attack);
     }
     public void Hit(float damage)
     {
