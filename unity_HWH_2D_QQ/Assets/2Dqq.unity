@@ -27111,7 +27111,7 @@ MonoBehaviour:
   speed: 2
   psAttack: {fileID: 785128672}
   cdAttack: 2
-  attack: 20
+  attack: 200
 --- !u!1001 &1190760835
 PrefabInstance:
   m_ObjectHideFlags: 0

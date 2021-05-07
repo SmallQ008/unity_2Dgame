@@ -18,10 +18,11 @@ public class HPmaneger : MonoBehaviour
     {
         bar.fillAmount = Hp / HpMax;
     }
-    public IEnumerator ShowDamage()
+    public IEnumerator ShowDamage(float damage)
     {
         RectTransform rect = Instantiate(rectDamage, transform);
         rect.anchoredPosition = new Vector2(0, 200);
+        rect.GetComponent<Text>().text = damage.ToString();
 
         float y = rect.anchoredPosition.y;
 
@@ -31,5 +32,6 @@ public class HPmaneger : MonoBehaviour
             rect.anchoredPosition = new Vector2(0, y);
             yield return new WaitForSeconds(0.02f);
         }
+        Destroy(rect.gameObject, 0.5f);
     }
 }

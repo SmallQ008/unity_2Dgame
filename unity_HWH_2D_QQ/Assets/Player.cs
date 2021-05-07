@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
     }
     private void Move()
     {
+        if (isDead)return;
        // print("移動");
         float h = joystick.Horizontal;
         //print("水平:" + h);
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
     }
     public void Attack()
     {
+        if (isDead) return;
         print("攻擊");
         //2D 物理圓形碰撞(中心點, 半徑,方向)
         RaycastHit2D hit =Physics2D.CircleCast(transform.position, rangeAttack, transform.up,0,1<<8 );
@@ -62,11 +65,18 @@ public class Player : MonoBehaviour
     {
         hp -= damage;
         hpManager.UpdateHpBar(hp, hpMax);
-        StartCoroutine(hpManager.ShowDamage());
+        StartCoroutine(hpManager.ShowDamage(damage));
+        if (hp <= 0) Dead();
     }
     private void Dead()
     {
-
+        hp = 0;
+        isDead = true;
+        Invoke("Replay", 2);
+    }
+    private void Replay()
+    {
+        SceneManager.LoadScene("2Dqq");
     }
     private void Start()
     {

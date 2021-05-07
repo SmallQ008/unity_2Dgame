@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 4045
+  controlID: 1270
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 3897
+  controlID: 1154
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 4024
+  controlID: 1182
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,16 +421,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: c05ab34f0de35ca4ab647003a5eec61b
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 367.45, y: 481.21, z: 0}
+    m_Target: {x: -1.9539237, y: -8.431011, z: -769.34906}
     speed: 2
-    m_Value: {x: 367.45, y: 481.21, z: 0}
+    m_Value: {x: -1.9539237, y: -8.431011, z: -769.34906}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -480,9 +480,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 103.077644
+    m_Target: 1.6611155
     speed: 2
-    m_Value: 103.077644
+    m_Value: 1.6611155
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 985a0000
-      m_LastClickedID: 23192
-      m_ExpandedIDs: acebffffb8ebffff985a0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -658,20 +658,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - "Assets/\u9810\u7F6E\u7269"
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 42
   m_LastFolders:
-  - "Assets/\u9810\u7F6E\u7269"
+  - Assets
   m_LastFoldersGridSize: 42
   m_LastProjectPath: C:\Users\User\Documents\GitHub\unity_2Dgame\unity_HWH_2D_QQ
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 35}
-    m_SelectedIDs: 7c400000
-    m_LastClickedID: 16508
-    m_ExpandedIDs: 0000000040400000424000004440000046400000484000004a4000004c40000000ca9a3b
+    m_SelectedIDs: 4a400000
+    m_LastClickedID: 16458
+    m_ExpandedIDs: 000000004a4000004c4000004e4000005040000052400000544000005640000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -699,7 +699,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000040400000424000004440000046400000484000004a4000004c40000000ca9a3b
+    m_ExpandedIDs: 000000004a4000004c4000004e4000005040000052400000544000005640000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -751,7 +751,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 60}
     m_GridSize: 42
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 94
@@ -818,4 +818,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 127
