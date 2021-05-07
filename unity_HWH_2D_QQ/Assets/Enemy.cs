@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
     }
     private void Track()
     {
+        if (isDead) return;
         float dis =Vector3.Distance(transform.position, player.position);
 
         print ("距離:" + dis);
@@ -71,7 +72,7 @@ public class Enemy : MonoBehaviour
         {
             timer = 0;
             psAttack.Play();
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, rangeAttack);
+            Collider2D hit = Physics2D.OverlapCircle(transform.position, rangeAttack ,1<<9);
             hit.GetComponent<Player>().Hit(attack);
         }
 
