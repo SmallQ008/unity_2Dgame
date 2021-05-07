@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     private float hpMax;
     [Header("血量系統")]
     public HPmaneger hpManager;
+    [Header("角色是否死亡")]
+    public bool isDead = false;
 
     private float HpMax;
 
@@ -73,6 +75,20 @@ public class Enemy : MonoBehaviour
             hit.GetComponent<Player>().Hit(attack);
         }
 
+        
+    }
+    public void Hit(float damage)
+    {
+        hp -= damage;
+        hpManager.UpdateHpBar(hp, hpMax);
+        StartCoroutine(hpManager.ShowDamage(damage));
+        if (hp <= 0) Dead();
+    }
 
+    private void Dead()
+    {
+        hp = 0;
+        isDead = true;
+        Destroy(gameObject, 1.5f);
     }
 }
