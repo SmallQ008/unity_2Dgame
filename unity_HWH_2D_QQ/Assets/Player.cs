@@ -91,11 +91,23 @@ public class Player : MonoBehaviour
         hpMax = hp;
     }
 
+    private float expNeed = 100;
+
+    [Header("經驗值吧條")]
+    public Image imgExp;
     private float exp;
     public void Exp (float getExp)
     {
         exp += getExp;
         print("經驗值:" + exp);
+        imgExp.fillAmount = exp / expNeed;
+        if (exp >= expNeed)
+        {
+            lv++;
+            textLv.text = "Lv" + lv;
+            exp = expNeed;
+            imgExp.fillAmount = exp / expNeed;
+        }
     }
 
     private void Update()
