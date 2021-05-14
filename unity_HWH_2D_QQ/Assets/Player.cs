@@ -109,12 +109,13 @@ public class Player : MonoBehaviour
             exp -= expNeed;
             imgExp.fillAmount = exp / expNeed;
             expNeed = expData.exp[lv - 1];
+            LevelUp();
         }
        
     }
     private void LevelUp()
     {
-        attack = 20 + (lv -1) * 10;
+        attack = 20 + (lv - 1) * 100;
         hpMax = 200 + (lv - 1) * 50;
         hp = hpMax;
         hpManager.UpdateHpBar(hp, HpMax);
