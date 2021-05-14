@@ -86,10 +86,7 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene("2Dqq");
     }
-    private void Start()
-    {
-        hpMax = hp;
-    }
+
 
     private float expNeed = 100;
 
@@ -97,16 +94,31 @@ public class Player : MonoBehaviour
     public Image imgExp;
     private float exp;
     public void Exp (float getExp)
+
+        
     {
+        expNeed = expData.exp[lv -1];
+
         exp += getExp;
         print("經驗值:" + exp);
         imgExp.fillAmount = exp / expNeed;
-        if (exp >= expNeed)
+        while (exp >= expNeed)
         {
             lv++;
             textLv.text = "Lv" + lv;
             exp = expNeed;
             imgExp.fillAmount = exp / expNeed;
+        }
+       
+    }
+    [Header("經驗值資料")]
+    public ExpData expData;
+    private void Start()
+    {
+        hpMax = hp;
+        for (int i = 0; i < 99; i ++)
+        {
+            expData.exp[i] = (i + 1) * 100;
         }
     }
 

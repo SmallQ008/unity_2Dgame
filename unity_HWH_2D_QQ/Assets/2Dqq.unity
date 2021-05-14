@@ -20802,6 +20802,7 @@ MonoBehaviour:
   attack: 20
   textLv: {fileID: 378391898}
   imgExp: {fileID: 1095925307}
+  expData: {fileID: 11400000, guid: 4e4e7ea797c05b947bba27334a21ec4a, type: 2}
   soundEat: {fileID: 8300000, guid: 5b7ddfe35ebf8f346a5cd1af95a7d58c, type: 3}
   textCoin: {fileID: 622382962}
 --- !u!50 &473202543
@@ -25526,6 +25527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: attack
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206311558143843423, guid: e7e8e6a26f5857441a2e3b660f1d81be,
+        type: 3}
+      propertyPath: exp
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e8e6a26f5857441a2e3b660f1d81be, type: 3}
