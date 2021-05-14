@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public float attack = 20;
     [Header("等級文字")]
     public Text textLv;
+    
 
     private float HpMax;
 
@@ -79,6 +80,7 @@ public class Player : MonoBehaviour
         hp = 0;
         isDead = true;
         Invoke("Replay", 2);
+
     }
     private void Replay()
     {
@@ -87,6 +89,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         hpMax = hp;
+    }
+
+    private float exp;
+    public void Exp (float getExp)
+    {
+        exp += getExp;
+        print("經驗值:" + exp);
     }
 
     private void Update()
