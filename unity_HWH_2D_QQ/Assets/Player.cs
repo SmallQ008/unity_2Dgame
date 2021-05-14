@@ -112,6 +112,13 @@ public class Player : MonoBehaviour
         }
        
     }
+    private void LevelUp()
+    {
+        attack = 20 + (lv -1) * 10;
+        hpMax = 200 + (lv - 1) * 50;
+        hp = hpMax;
+        hpManager.UpdateHpBar(hp, HpMax);
+    }
     [Header("經驗值資料")]
     public ExpData expData;
     private void Start()
