@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
         {
             lv++;
             textLv.text = "Lv" + lv;
-            exp = expNeed;
+            exp -= expNeed;
             imgExp.fillAmount = exp / expNeed;
         }
        
