@@ -59,14 +59,15 @@ public class Player : MonoBehaviour
     public void Attack()
     {
         if (isDead) return;
-        print("攻擊");
+        //print("攻擊");
         //2D 物理圓形碰撞(中心點, 半徑,方向)
         RaycastHit2D hit =Physics2D.CircleCast(transform.position, rangeAttack, transform.up,0,1<<8 );
-        print("碰到的物件:" + hit.collider.name);
+        //print("碰到的物件:" + hit.collider.name);
         aud.PlayOneShot(soundAttack, 0.5f);
 
         if (hit && hit.collider.tag == "道具") hit.collider.GetComponent<item>().DropProp();
-        if (hit && hit.collider.tag == "敵人") hit.collider.GetComponent<Enemy>().Hit(attack);
+        if (hit && hit.collider.tag == "敵人") hit.collider.GetComponent<Enemy>().Hit(attack + attackWeapon);
+        if (hit && hit.collider.tag == "NPC") hit.collider.GetComponent<NPC>().OpenShop();
     }
     public void Hit(float damage)
     {
@@ -124,6 +125,7 @@ public class Player : MonoBehaviour
     public ExpData expData;
     private void Start()
     {
+        coin = 100;
         hpMax = hp;
         for (int i = 0; i < 99; i ++)
         {
@@ -140,7 +142,8 @@ public class Player : MonoBehaviour
     [Header("金幣數量")]
     public Text textCoin;
 
-    private int coin;
+    public int coin;
+    public float attackWeapon;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

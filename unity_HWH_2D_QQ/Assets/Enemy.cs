@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
         float dis =Vector3.Distance(transform.position, player.position);
 
-        print ("距離:" + dis);
+        //print ("距離:" + dis);
         if (dis <= rangeAttack)
         {
             Attack();
